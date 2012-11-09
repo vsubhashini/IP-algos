@@ -1,0 +1,28 @@
+/* 
+* IP address look up algorithms [Best Prefix Match]
+* 
+*
+* @authors vsubhashini
+*/
+
+*This folder contains
+    this README file
+    the lab report
+    source folder
+    sampletests folder [with sample inputs and outputs]
+
+Usage:
+    $cd source
+    $make [ignore compiler message, please read NOTE]
+    $./bmp.o  -p [Prefixfile] -i [InputAddrFile] -o [Outputfile] -W 24 -a [B|M|H]
+
+    (The options may be mentioned in any order)
+
+NOTE:
+On doing 'make' the compiler will output the following message which can be ignored:
+
+In file included from /usr/include/c++/4.3/ext/hash_map:64,
+                 from lpm.cpp:19:
+/usr/include/c++/4.3/backward/backward_warning.h:33:2: warning: #warning This file includes at least one deprecated or antiquated header which may be removed without further notice at a future date. Please use a non-deprecated interface with equivalent functionality instead. For a listing of replacement headers and interfaces, consult the file backward_warning.h. To disable this warning use -Wno-deprecated.
+
+This warning occurs because we use hash_map in our code which is a deprecated function for the newer unordered_map. But glibc had to be updated to use the new funtion in the lab, hence we went along with the older implementation.    
